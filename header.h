@@ -8,7 +8,7 @@
     *  Ergebnis : Erg: Gibt ein int wert aus.(Nein = 0 | Ja = 1)
     ***************************************************************************/
 
-int isLeapYear(int year);
+//int isLeapYear(int year);
 
    /***************************************************************************
     *  getDateFromString

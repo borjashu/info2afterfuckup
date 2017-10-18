@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1508363059 source:/home/borja/info2afterfuckup/date_time.c
+	<stdio.h>
+	"header.h"
+
+1508364690 /home/borja/info2afterfuckup/header.h
+	<stdio.h>
+	"datastructure.h"
+
+1508363093 /home/borja/info2afterfuckup/datastructure.h
+

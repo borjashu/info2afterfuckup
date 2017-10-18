@@ -43,5 +43,4 @@ int askAgain()
    void clearScreen()
    {
     clear();
-
-}
+    }

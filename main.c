@@ -9,6 +9,8 @@ void inputTime();
 
 int main()
 {
+
+
    do
    {
       clearScreen();
