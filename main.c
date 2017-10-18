@@ -4,13 +4,12 @@
 #include "tools.h"
 #include "header.h"
 
+
 void inputDate();
 void inputTime();
 
 int main()
 {
-
-
    do
    {
       clearScreen();
@@ -18,8 +17,8 @@ int main()
       printf("         um die jeweilige Eingabe abzubrechen.\n\n");
 
       inputDate();
-//      inputTime();
-   } while (askYesOrNo());
+      //inputTime();
+   } while (askYesOrNo("Moechten Sie noch einmal (j/n) ? "));
 
    return 0;
 }
@@ -42,18 +41,25 @@ void inputDate()
    char Input[20];
    int ok = 0;
 
-
+   do
+   {
       printf("Geben Sie bitte ein gueltiges Datum ein: ");
       *Input = '\0';
       scanf("%19[^\n]", Input);
       clearBuffer();
+      if (*Input)
+         if (getDateFromString(Input, &Date))
+         {
+     //       printf("Das Datum %02i.%02i.%04i ist gueltig!\n", Date.Day, Date.Month, Date.Year);
+            ok = 1;
+         }
+         else
+            printf("Das eingegebene Datum %s ist ungueltig!\n", Input);
+      else
+         break;
+   } while (!ok);
 
-     getDateFromString(Input, &Date);
-
-
-
-
-
+   printf("\n");
 }
 
 /********************************************************************
@@ -93,5 +99,4 @@ void inputDate()
    } while (!ok);
 
    printf("\n");
-}
-*/
+}*/

@@ -11,7 +11,7 @@ void clearBuffer()
     } while (dummy != '\n');
 }
 
-int askAgain()
+int askYesOrNo()
 {
     int Erg,
         Eingabe;

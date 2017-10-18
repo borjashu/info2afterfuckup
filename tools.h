@@ -17,9 +17,9 @@
     *
     *  Ergebnis : Erg: Gibt ein int wert aus.(Nein = 0 | Ja = 1)
     ***************************************************************************/
-    int askAgain();
+    int askYesOrNo();
 
 
-    void clearScreen()
+    void clearScreen();
 
 #endif // TOOLS_H_INCLUDED
