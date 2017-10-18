@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1508363059 source:/home/borja/Dokumente/info2/git/info2_17/date_time.c
+	<stdio.h>
+	"header.h"
+
+1508363069 /home/borja/Dokumente/info2/git/info2_17/header.h
+	<stdio.h>
+	"datastructure.h"
+
+1508363093 /home/borja/Dokumente/info2/git/info2_17/datastructure.h
+
+1508363085 source:/home/borja/Dokumente/info2/git/info2_17/main.c
+	<stdio.h>
+	"datastructure.h"
+	"tools.h"
+	"header.h"
+
+1508363732 /home/borja/Dokumente/info2/git/info2_17/tools.h
+
+1508363059 source:/home/borja/info2afterfuckup/date_time.c
+	<stdio.h>
+	"header.h"
+
+1508363069 /home/borja/info2afterfuckup/header.h
+	<stdio.h>
+	"datastructure.h"
+
+1508363093 /home/borja/info2afterfuckup/datastructure.h
+
+1508363085 source:/home/borja/info2afterfuckup/main.c
+	<stdio.h>
+	"datastructure.h"
+	"tools.h"
+	"header.h"
+
+1508363732 /home/borja/info2afterfuckup/tools.h
+
