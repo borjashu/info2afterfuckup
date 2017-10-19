@@ -19,7 +19,7 @@ int isLeapYear(int year)
 
 int getDateFromString(char Input[], TDate *Date)
 {
-int k,i,dotc=0;
+int i,dotc=0;
 int j =0;
 char buff[20];
 char t;
@@ -32,7 +32,7 @@ for (i=0;i<19;i++)
 
             {
             buff[j]=Input[i];
-           // printf("%c\n", buff[j]);
+
             j++;
             }
 
@@ -43,8 +43,7 @@ for (i=0;i<19;i++)
              if(dotc==0)
                 {
                     temp.Day=atoi(buff);
-                    printf("%d\n",temp.Day);
-                      //printf("buff:%s \n", buff);
+
 
 
                 }
@@ -52,9 +51,8 @@ for (i=0;i<19;i++)
                 if(dotc==1)
                 {
                     temp.Month=atoi(buff);
-                    printf("%d\n",temp.Month);
-                 // printf("%d",dotc);
-                   // printf("buff:%s \n", buff);
+
+
 
 
                 }
@@ -68,9 +66,7 @@ for (i=0;i<19;i++)
             { if(dotc==2)
             {
                     temp.Year=atoi(buff);
-                   printf("%d\n",temp.Year);
-                     printf("buff:%s \n", buff);
-                    *buff = '\0';
+                   *buff = '\0';
                     dotc=0;
                                 }
                  break;
@@ -78,11 +74,21 @@ for (i=0;i<19;i++)
 
 
         }
+        if(isDateValid(&temp))
+            {
+                *Date=temp;
+          /*  Date.Day=temp.Day;
+            Date.Month=temp.Month;
+            Date.Year=temp.Year;*/
+            }
         return 1;
 }
 
 /*Ueberprüt ob das angegebene Datum (Parameter Struktur TDate mit Tag, Monat und Jahr) ein gültiges Datum ist*/
-//int isDateValid(char Input)
+int isDateValid(TDate *temp )
+{
+return 1;
+}
 
 
 
@@ -140,31 +146,3 @@ for (i=0;i<19;i++)
 
 
 
-
-/*
-   int day,moth,year,j,i=0;
-    char buff[20];
-     printf("hujlo");
-    for (i=0;i<20;i++)
-        {
-
-    v
-    buff[j]=Input1[i];
-    printf("%s", buff[j]);
-            }
-        }
-        }
-   /* else
-            {
-    i++;
-            }
-    j++;
-        }
-    /*if (isDateValid(Input))
-    {
-    return 1;
-    }
-    else
-    {
-    return 0;
-    }*/

@@ -50,7 +50,7 @@ void inputDate()
       if (*Input)
          if (getDateFromString(Input, &Date))
          {
-     //       printf("Das Datum %02i.%02i.%04i ist gueltig!\n", Date.Day, Date.Month, Date.Year);
+           printf("Das Datum %02i.%02i.%04i ist gueltig!\n", Date.Day, Date.Month, Date.Year);
             ok = 1;
          }
          else
