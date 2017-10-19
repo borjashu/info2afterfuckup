@@ -44,8 +44,8 @@ for (i=0;i<19;i++)
                 {
                     temp.Day=atoi(buff);
                     printf("%d\n",temp.Day);
-                    *buff = '\0';
-                    dotc++;
+                      //printf("buff:%s \n", buff);
+
 
                 }
 
@@ -53,25 +53,26 @@ for (i=0;i<19;i++)
                 {
                     temp.Month=atoi(buff);
                     printf("%d\n",temp.Month);
-                    *buff = '\0';
-                    dotc++;
+                 // printf("%d",dotc);
+                   // printf("buff:%s \n", buff);
+
 
                 }
 
-                    temp.Year=atoi(buff);
-                    printf("%d\n",temp.Year);
                     *buff = '\0';
                     dotc++;
-
-
+                    j=0;
 
             }
              if(Input[i]=='\0')
+            { if(dotc==2)
             {
-                temp.Year=atoi(buff);
-                    printf("%d\n",temp.Year);
+                    temp.Year=atoi(buff);
+                   printf("%d\n",temp.Year);
+                     printf("buff:%s \n", buff);
                     *buff = '\0';
-                    dotc++;
+                    dotc=0;
+                                }
                  break;
             }
 
