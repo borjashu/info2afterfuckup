@@ -74,20 +74,23 @@ for (i=0;i<19;i++)
 
 
         }
-        if(isDateValid(&temp))
+        if(isDateValid(temp))
             {
                 *Date=temp;
-          /*  Date.Day=temp.Day;
-            Date.Month=temp.Month;
-            Date.Year=temp.Year;*/
+         return 1;
             }
-        return 1;
+        return 0;
 }
 
 /*Ueberprüt ob das angegebene Datum (Parameter Struktur TDate mit Tag, Monat und Jahr) ein gültiges Datum ist*/
-int isDateValid(TDate *temp )
+int isDateValid(TDate temp )
 {
-return 1;
+    if(temp.Month<=12&&temp.Day<=31)
+
+        {
+        return 1;
+        }
+        else return 0;
 }
 
 
