@@ -19,18 +19,19 @@ int isLeapYear(int year)
 
 int getDateFromString(char Input[], TDate *Date)
 {
-//char *Input1=Input;
-int k,j,i,dotc=0;
+int k,i,dotc=0;
+int j =0;
 char buff[20];
+char t;
 *buff = '\0';
 TDate temp;
-for (i=0;i<20;i++)
+for (i=0;i<19;i++)
         {
             if(Input[i]!='.'&&Input[i]!='\0')
 
             {
-         buff[j]=Input[i];
-        printf("%c\n",buff[i]);
+        buff[j]=Input[i];
+        printf("%c\n", buff[j]);
            j++;
             }
             if(Input[i]=='\0')
@@ -41,19 +42,18 @@ for (i=0;i<20;i++)
             {
              if(dotc==0)
                 {
-
-                    printf("%s\n",buff);
-
-
-                   //temp.Day=atoi(buff);
-                   //printf("%d",temp.Day);
+                temp.Day=atoi(buff);
+                   printf("%d",temp.Day);
+                    *buff = '\0';
                    dotc++;
+
                 }
 
 
             }
 
         }
+        return 1;
 }
 
 /*Ueberprüt ob das angegebene Datum (Parameter Struktur TDate mit Tag, Monat und Jahr) ein gültiges Datum ist*/
