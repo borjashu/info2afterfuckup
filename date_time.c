@@ -85,11 +85,22 @@ for (i=0;i<19;i++)
 /*Ueberprüt ob das angegebene Datum (Parameter Struktur TDate mit Tag, Monat und Jahr) ein gültiges Datum ist*/
 int isDateValid(TDate temp )
 {
-    if(temp.Month<=12&&temp.Day<=31)
+    int month[]={0,31,29,31,30,31,30,31,31,30,31,30,31};
 
-        {
+    if(temp.Month<=12&&temp.Day<=month[temp.Month]&&temp.Month!=2)
+
+    {
+            printf("%d\n",month[temp.Month]);
         return 1;
-        }
+    }
+     if(temp.Month==2&&temp.Day<29)
+    {printf("nooot interestinleeeep\n");
+       return 1;
+    }
+    if(temp.Month==2&&temp.Day==29)
+    { printf("leeeep\n");
+        return isLeapYear(temp.Year);
+    }
         else return 0;
 }
 
