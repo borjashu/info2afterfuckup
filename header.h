@@ -20,3 +20,6 @@ int isLeapYear(int year);
     ***************************************************************************/
 
 int getDateFromString(char Input[], TDate *Date);
+
+
+int getTimeFromString(char Input[], TTime *Time);

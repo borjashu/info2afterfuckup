@@ -17,7 +17,7 @@ int main()
       printf("         um die jeweilige Eingabe abzubrechen.\n\n");
 
       inputDate();
-      //inputTime();
+      inputTime();
    } while (askYesOrNo("Moechten Sie noch einmal (j/n) ? "));
 
    return 0;
@@ -74,7 +74,7 @@ void inputDate()
  * Paramater: keine
  * Funktionsergebnis: nichts
  *******************************************************************/
-/*void inputTime()
+void inputTime()
 {
    TTime Time;
    char Input[20];
@@ -99,4 +99,4 @@ void inputDate()
    } while (!ok);
 
    printf("\n");
-}*/
+}
