@@ -1,8 +1,9 @@
 
 #include <stdio.h>
 #include "header.h"
-
-/*Checkin if the year is a leap year or not */
+/**************************************************
+ *  Checkin if the year is a leap year or not
+**************************************************/
 int isLeapYear(int year)
 {
     if(year%4==0)
@@ -15,7 +16,11 @@ int isLeapYear(int year)
     else
     return 0;
 }
-
+/**************************************************
+ *  liest aus einer Zeichenkette die Tag, Monat
+ *  und Jahr und speichert diese – sofern sie eine
+ *  gültige Datum bilden – in der Datestruktur.
+**************************************************/
 
 int getDateFromString(char Input[], TDate *Date)
 {
@@ -81,7 +86,11 @@ for (i=0;i<19;i++)
         return 0;
 }
 
-/*Ueberprüt ob das angegebene Datum (Parameter Struktur TDate mit Tag, Monat und Jahr) ein gültiges Datum ist*/
+/**************************************************
+ *  Ueberprüt ob das angegebene Datum
+ *  (Parameter Struktur TDate mit Tag,
+ *  Monat und Jahr) ein gültiges Datum ist
+**************************************************/
 int isDateValid(TDate temp )
 {
     int month[]={0,31,29,31,30,31,30,31,31,30,31,30,31};
@@ -108,7 +117,11 @@ int isDateValid(TDate temp )
 
 
 
-
+/***************************************************
+ *  liest aus einer Zeichenkette die Stunden, Minuten
+ *  und Sekunden und speichert diese – sofern sie eine
+ *  gültige Uhrzeit bilden – in der Zeitstruktur.
+***************************************************/
 
 int getTimeFromString(char Input[], TTime *Time)
 {
@@ -176,7 +189,11 @@ for (i=0;i<19;i++)
 
 
 
-/*Ueberprüt ob das angegebene Datum (Parameter Struktur TDate mit Tag, Monat und Jahr) ein gültiges Datum ist*/
+/**************************************************
+ *   Ueberprüt ob das angegebene Zeit
+ * (Parameter Struktur TTime mit Stunden,
+ *   Minuten und Sekunden) ein gültiges Zeit ist
+ **************************************************/
 int isTimeValid(TTime temp )
 {
     if(temp.Hour<=24&&temp.Minute<=60&&temp.Second<=60) return 1;
