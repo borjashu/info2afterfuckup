@@ -3,7 +3,7 @@
 
 typedef struct {
 int Year;
-int Moth;
+int Month;
 int Day;
 }TDate;
 

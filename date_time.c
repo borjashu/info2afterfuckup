@@ -25,32 +25,56 @@ char buff[20];
 char t;
 *buff = '\0';
 TDate temp;
+
 for (i=0;i<19;i++)
         {
             if(Input[i]!='.'&&Input[i]!='\0')
 
             {
-        buff[j]=Input[i];
-        printf("%c\n", buff[j]);
-           j++;
+            buff[j]=Input[i];
+           // printf("%c\n", buff[j]);
+            j++;
             }
-            if(Input[i]=='\0')
-            {
-                 break;
-            }
+
+
              if(Input[i]=='.')
             {
+
              if(dotc==0)
                 {
-                temp.Day=atoi(buff);
-                   printf("%d",temp.Day);
+                    temp.Day=atoi(buff);
+                    printf("%d\n",temp.Day);
                     *buff = '\0';
-                   dotc++;
+                    dotc++;
 
                 }
 
+                if(dotc==1)
+                {
+                    temp.Month=atoi(buff);
+                    printf("%d\n",temp.Month);
+                    *buff = '\0';
+                    dotc++;
+
+                }
+
+                    temp.Year=atoi(buff);
+                    printf("%d\n",temp.Year);
+                    *buff = '\0';
+                    dotc++;
+
+
 
             }
+             if(Input[i]=='\0')
+            {
+                temp.Year=atoi(buff);
+                    printf("%d\n",temp.Year);
+                    *buff = '\0';
+                    dotc++;
+                 break;
+            }
+
 
         }
         return 1;
