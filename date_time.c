@@ -24,7 +24,7 @@ int isLeapYear(int year)
 
 int getDateFromString(char Input[], TDate *Date)
 {
-    int i,dotc=0;
+    int k,i,dotc=0;
     int j =0;
     char buff[20];
     *buff = '\0';
@@ -50,7 +50,11 @@ int getDateFromString(char Input[], TDate *Date)
                     temp.Month=atoi(buff);
                 }
 
-                *buff = '\0';
+                for(k=0;k<=20;k++)
+                {
+                    buff[k] = '\0';
+                }
+
                 dotc++;
                 j=0;
             }
@@ -60,10 +64,15 @@ int getDateFromString(char Input[], TDate *Date)
                 if(dotc==2)
                 {
                     temp.Year=atoi(buff);
-                    *buff = '\0';
                     dotc=0;
+
+                    for(k=0;k<=20;k++)
+                    {
+                        buff[k] = '\0';
+                    }
+
                 }
-                 break;
+               else  break;
             }
 
 
